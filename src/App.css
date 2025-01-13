@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Zain:ital,wght@0,200;0,300;0,400;0,700;0,800;0,900;1,300;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap');
+
+.noto-sans {
+  font-family: "Noto Sans", serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+*{
+  font-family: "Geist", serif;
+}
+
+body {
+  padding-top: 120px; /* Ajusta según la altura del navbar */
+}
+
+
+.icon{
+  width: 25px;
+  /* height: 100%; */
+  /* max-width: 20px; */
+}
+
+.card{
+  margin-left: 50px;
+  cursor: pointer;
+  width: 250px;
+}
+
+img{
+  border-radius: 8px;
+}
+
+.test {
+  visibility: hidden; /* Inicialmente oculto */
+  transition: visibility 0.3s ease, opacity 0.3s ease;
+  opacity: 0; /* También se puede usar para un efecto más suave */
+}
+
+.card:hover .test {
+  visibility: visible; /* Visible al hacer hover */
+  opacity: 1;
+}
+
+
+
+/* .container{
+  background-color: #e3e5e2;
+
+} */
+
+
+
+
+/* ///////////////////// PAGINACIÓN ////////////////////////// */
+
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.pagination button {
+  margin: 0 5px;
+  padding: 10px 15px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.pagination button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.pagination span {
+  margin: 0 10px;
+  font-size: 16px;
+}
+
+
+/* ///////////////////  HEADER //////////////////////// */
+
+.navbar-light{
+  /* background-color: #ffffff; */
+  /* margin: 25px; */
+  /* margin-bottom: 25px; */
+  font-weight: 600;
+  font-size: 14px;
+  font-family: "Geist", serif;
+  /* border-bottom: 1px solid #d1d1d1; */
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  z-index: 1030;
+  backdrop-filter: blur(20px); /* Desenfoque del contenido detrás */
+  background-color: rgba(255, 255, 255, 0.8);
+  color:#F6F6F6;
+  color:#bdbdbd;
+}
+
+
+.navbar-dark{
+  font-weight: 600;
+  font-size: 14px;
+  font-family: "Geist", serif;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  z-index: 1030;
+  backdrop-filter: blur(20px); /* Desenfoque del contenido detrás */
+  background-color: #0006;
+  /* color:#F6F6F6; */
+  /* color:#ffffff;  */   
+}
+
+.navbar form{
+  margin-right:30px;
+}
+
+.sun{
+  height: 30px;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  width: 30px;
+  color: black;
+}
+
+.sun:hover{
+  background-color: #F6F6F6;
+  /* background-color: #F5F7FA; */
+  cursor: pointer;
+}
+
+.moon{
+  height: 30px;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  width: 30px;
+  color: white;
+}
+
+.bi-moon-stars:hover{
+  fill: black;
+}
+
+
+
+.navbar img{
+  width: 45px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.navbar img:hover{
+  transform: scale(1.1);
+}
+
+/* .nav-item{
+  color:#F6F6F6;
+  color:#F5F7FA;
+} */
+
+
+.nav-item:hover{
+  color:#09090b;
+}
+
+.nav-item-dark a{
+  color:#bdbdbd;
+}
+
+.nav-item-dark a:hover{
+  color:#ffffff;
+}
+
+.intro{
+  background-color: #F8F9FA;
+  font-family: "Noto Sans", serif;
+}
+
+.intro h1{
+  padding: 16px;
+}
+
+.intro p {
+  padding-left: 16px;
+  padding-right: 16px;
+  text-align: justify;
+}
+
+.lastParraf{
+  padding-bottom: 20px;
+}
+
+.navbar input {
+  min-width: 300px;
+  max-width: auto;
+  height: 30px;
+  font-size: 14px;
+  background-color: #f6f6f6;
+  /* background-color: #F5F7FA; */
+}
+
+
+
+/* ///////////////////  FOOTER  //////////////////////// */
+
+.bi-linkedin{
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.bi-linkedin:hover{
+  fill:#007bff;
+  transform: scale(1.1);
+}
+
+.bi-github{
+  transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.bi-github:hover{
+  fill:#800080;
+  transform: scale(1.1);
+}
+
+footer span{
+  font-weight: 600;
+  font-size: 14px;
+  font-family: "Geist", serif;
+}
