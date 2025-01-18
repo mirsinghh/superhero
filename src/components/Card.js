@@ -1,92 +1,27 @@
 // src/components/Card.js
 import React from 'react';
 
-const Card = ({ hero }) => {
+const Card = ({
+  hero = {
+    images: { md: "", sm: "", lg: "" },
+    name: "Unknown Hero",
+  },
+}) => {
+  const imageUrl = hero.images ? hero.images.md || hero.images.sm || hero.images.lg : "";
+
   return (
 
-    <div class="d-flex p-3">
 
-      {/* <div class="card" style={{padding: "10px"}}>
-        <img src={hero.image.url} class="rounded card-img-top" alt={hero.name} />
+
+      <div class="card border-0">
+        <img src={imageUrl} class="text-center rounded" alt={hero.name} />
         <div class="card-body">
-          <h5 class="card-title text-center">{hero.name}</h5>
+          <h5 class="text-start">{hero.name}</h5>
         </div>
-      </div> */}
-
-      <div class="card" style={{padding: "10px"}}>
-        <div class="card-body test">
-          <h5 class="card-title text-center">{hero.name}</h5>
-        </div>
-        <img src={hero.image.url} class="rounded" alt={hero.name} />
       </div>
 
-    </div>
-
-    
 
 
-    // <div 
-    //   className="card"
-    //   // style={{marginLeft:"40px"}}
-
-    // >
-    //   <img
-    //     src={hero.image.url}
-    //     alt={hero.name}
-    //     style={{ width: "150px", height: "auto"}}
-    //   />
-
-    //   <h2>{hero.name}</h2>
-    //   <h4>Full Name: {hero.biography["full-name"]}</h4>
-    //   <p>
-    //     <strong>Publisher:</strong> {hero.biography.publisher}
-    //   </p>
-    //   <p>
-    //     <strong>Powerstats:</strong>
-    //   </p>
-    //   <ul>
-    //     <li>Intelligence: {hero.powerstats.intelligence}</li>
-    //     <li>Strength: {hero.powerstats.strength}</li>
-    //     <li>Speed: {hero.powerstats.speed}</li>
-    //     <li>Durability: {hero.powerstats.durability}</li>
-    //     <li>Power: {hero.powerstats.power}</li>
-    //     <li>Combat: {hero.powerstats.combat}</li>
-    //   </ul>
-    //   <p>
-    //     <strong>Appearance:</strong>
-    //   </p>
-    //   <ul>
-    //     <li>gender: {hero.appearance.gender}</li>
-    //     <li>Race: {hero.appearance.race}</li>
-    //     <li>Height: {hero.appearance.height}</li>
-    //     <li>Weight: {hero.appearance.weight}</li>
-    //     <li>Eye-color: {hero.appearance["eye-color"]}</li>
-    //     <li>Hair-color: {hero.appearance["fhair-color"]}</li>
-    //   </ul>
-    //   <p>
-    //     <strong>Biography:</strong>
-    //   </p>
-    //   <ul>
-    //     <li>Alter-egos: {hero.biography["alter-egos"]}</li>
-    //     <li>Aliases: {hero.biography.aliases}</li>
-    //     <li>Place-of-birth: {hero.biography["place-of-birth"]}</li>
-    //     <li>First-appearance: {hero.biography["first-appearance"]}</li>
-    //     <li>Alignment: {hero.biography.alignment}</li>
-    //   </ul>
-    //   <p>
-    //     <strong>Connections:</strong>
-    //   </p>
-    //   <ul>
-    //     <li>Group-affiliation: {hero.connections["group-affiliation"]}</li>
-    //     <li>Relatives: {hero.connections.relatives}</li>
-    //   </ul>
-    //   <p>
-    //     <strong>Work:</strong> {hero.work.occupation}
-    //   </p>
-    //   <p>
-    //     <strong>Base:</strong> {hero.work.base}
-    //   </p>
-    // </div>
   );
 };
 

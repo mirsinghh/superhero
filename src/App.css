@@ -16,43 +16,13 @@
 }
 
 body {
-  padding-top: 120px; /* Ajusta según la altura del navbar */
+  padding-top: 50px; /* Ajusta según la altura del navbar */
 }
 
-
-.icon{
-  width: 25px;
-  /* height: 100%; */
-  /* max-width: 20px; */
+.body-dark{
+  background-color: #000000;
 }
 
-.card{
-  margin-left: 50px;
-  cursor: pointer;
-  width: 250px;
-}
-
-img{
-  border-radius: 8px;
-}
-
-.test {
-  visibility: hidden; /* Inicialmente oculto */
-  transition: visibility 0.3s ease, opacity 0.3s ease;
-  opacity: 0; /* También se puede usar para un efecto más suave */
-}
-
-.card:hover .test {
-  visibility: visible; /* Visible al hacer hover */
-  opacity: 1;
-}
-
-
-
-/* .container{
-  background-color: #e3e5e2;
-
-} */
 
 
 
@@ -112,7 +82,7 @@ img{
   font-weight: 600;
   font-size: 14px;
   font-family: "Geist", serif;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 0.5px solid #3b3b3b;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
   z-index: 1030;
   backdrop-filter: blur(20px); /* Desenfoque del contenido detrás */
@@ -146,7 +116,12 @@ img{
   display: flex;
   align-items: center;
   width: 30px;
-  color: white;
+  /* color: white; */
+
+}
+
+.moon:hover{
+  background-color: #7c7c7c;
 }
 
 .bi-moon-stars:hover{
@@ -182,25 +157,6 @@ img{
   color:#ffffff;
 }
 
-.intro{
-  background-color: #F8F9FA;
-  font-family: "Noto Sans", serif;
-}
-
-.intro h1{
-  padding: 16px;
-}
-
-.intro p {
-  padding-left: 16px;
-  padding-right: 16px;
-  text-align: justify;
-}
-
-.lastParraf{
-  padding-bottom: 20px;
-}
-
 .navbar input {
   min-width: 300px;
   max-width: auto;
@@ -212,7 +168,118 @@ img{
 
 
 
+
+
+/* ///////////////////  HOME  //////////////////////// */
+
+.title h1{
+  color: black;
+  font-weight: 900 !important;
+}
+
+.home-buttons button{
+  background-color: #0284c7;
+  color: #ffffff;
+  /* box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px; */
+  /* box-shadow: rgba(2, 132, 199, 1) 0px 1px 4px; */
+  box-shadow: rgba(3, 105, 161, 1) 0px 1px 4px;
+
+}
+
+.home-buttons button:hover{
+  background-color: #0ea5e9;
+  color: #ffffff;
+}
+
+.home-dark h1{
+  color: white;
+}
+
+.home-dark p{
+  color: white;
+}
+
+
+/* .home-buttons button{
+  background-color: black;
+  color: #ffffff;
+  box-shadow: rgba(0, 0, 0, 1) 0px 1px 4px;
+  box-shadow: rgba(2, 132, 199, 1) 0px 1px 4px;
+  box-shadow: rgba(3, 105, 161, 1) 0px 1px 4px;
+
+}
+
+.home-buttons button:hover{
+  background-color: #3d3d3d;
+  color: #ffffff;
+}
+
+
+.home-buttons .OLE{
+  background-color: rgb(220, 38, 38);
+  color: #ffffff;
+  box-shadow: rgba(220, 38, 38) 0px 1px 4px;
+  box-shadow: rgba(2, 132, 199, 1) 0px 1px 4px;
+  box-shadow: rgba(3, 105, 161, 1) 0px 1px 4px;
+
+}
+
+.home-buttons .OLE:hover{
+  background-color: #ef4444;
+  color: #ffffff;
+} */
+
+
 /* ///////////////////  FOOTER  //////////////////////// */
+
+.footer-light{
+  border-top: 0.5px solid #dee2e6;
+}
+
+.footer-dark{
+  border-top: 0.5px solid #3b3b3b;
+}
+
+.footer-dark .bi-linkedin{
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  fill: white;
+}
+
+.footer-dark .bi-linkedin:hover{
+  fill:#007bff;
+  transform: scale(1.1);
+}
+
+.footer-dark .bi-github{
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  fill: white;
+}
+
+.footer-dark .bi-github:hover{
+  fill:#800080;
+  transform: scale(1.1);
+}
+
+.footer-dark span{
+  color: #ffffff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.footer-dark span:hover{
+  transform: scale(1.05);
+}
+
+footer span{
+  font-weight: 600;
+  font-size: 14px;
+  font-family: "Geist", serif;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+footer span:hover{
+  transform: scale(1.05);
+}
 
 .bi-linkedin{
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -232,8 +299,26 @@ img{
   transform: scale(1.1);
 }
 
-footer span{
-  font-weight: 600;
-  font-size: 14px;
-  font-family: "Geist", serif;
+
+
+
+/* ///////////////////// CARD ////////////////////////// */
+
+.card{
+  /* margin-left: 50px; */
+
+  /* width: 250px; */
 }
+
+.card img{
+  border-radius: 8px;
+  cursor: pointer;
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+}
+
+/* .container{
+  background-color: #e3e5e2;
+
+} */

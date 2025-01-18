@@ -1,6 +1,7 @@
 import './App.css';
 import React, { useState, useEffect } from "react";
-import Card from './components/Test';
+import Card from './components/Card';
+import { ThemeProvider } from './components/ThemeContext';
 import Footer from './components/Footer';
 import Header from './components/Header';
 import Home from './components/Home';
@@ -48,58 +49,60 @@ function App() {
   const currentHeroes = heroData.slice(startIndex, startIndex + itemsPerPage);
 
   return (
-    <div>
+    <ThemeProvider>
+      <div>
 
-      <Header />
+        <Header />
 
-      <Home />
+        <Home />
 
 
-      {error && <p>Error: {error}</p>}
+        {error && <p>Error: {error}</p>}
 
-      <div className="container border">
-        <div className="row justify-content-center">
-          {/* Mostrar las tarjetas a medida que los datos están disponibles */}
-          {currentHeroes.length > 0
-            ? currentHeroes.map((hero) => (
-                <div key={hero.id} className="col-md-3 p-0 border d-flex"> {/* 4 columnas */}
-                  <Card className="justify-content-center text-center" hero={hero} />
-                </div>
-              ))
-            : !loading && <p>No hay datos para mostrar</p>}
+        <div className="container">
+          <div className="row justify-content-center">
+            {/* Mostrar las tarjetas a medida que los datos están disponibles */}
+            {currentHeroes.length > 0
+              ? currentHeroes.map((hero) => (
+                  <div key={hero.id} className="col-md-3 p-0 d-flex justify-content-center align-items-center"> {/* 4 columnas */}
+                    <Card className="text-center" hero={hero} />
+                  </div>
+                ))
+              : !loading && <p>No hay datos para mostrar</p>}
+          </div>
         </div>
-      </div>
 
-      {/* Indicador de carga */}
-      {loading && <p className="loading-text">Cargando datos...</p>}
+        {/* Indicador de carga */}
+        {loading && <p className="loading-text">Cargando datos...</p>}
 
-      {/* Paginación */}
-      <div className="pagination">
-        <button 
-          onClick={() => handlePageChange(currentPage - 1)} 
-          disabled={currentPage === 1}
-        >
-          Anterior
-        </button>
-        <span>Página {currentPage} de {totalPages}</span>
-        <button 
-          onClick={() => handlePageChange(currentPage + 1)} 
-          disabled={currentPage === totalPages}
-        >
-          Siguiente
-        </button>
-      </div>
+        {/* Paginación */}
+        <div className="pagination">
+          <button 
+            onClick={() => handlePageChange(currentPage - 1)} 
+            disabled={currentPage === 1}
+          >
+            Anterior
+          </button>
+          <span>Página {currentPage} de {totalPages}</span>
+          <button 
+            onClick={() => handlePageChange(currentPage + 1)} 
+            disabled={currentPage === totalPages}
+          >
+            Siguiente
+          </button>
+        </div>
 
 
-      <br></br>
-      <br></br>
-      <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        
+        <Footer />
       
-      <Footer />
-     
 
 
-    </div>
+      </div>
+    </ThemeProvider>
   );
 }
 
