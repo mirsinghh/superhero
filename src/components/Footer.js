@@ -10,7 +10,7 @@ const Footer = () => {
 
   return (
 
-    <div className={`container-fluid ${isSun ? 'footer-light' : 'footer-dark'}`}>
+    <div className={`container-fluid  ${isSun ? 'footer-light' : 'footer-dark'}`}>
       <div class="container">
 
         <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-1">

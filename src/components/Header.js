@@ -2,6 +2,7 @@
 import React, { useContext } from 'react';
 import '../App.css'; 
 import { ThemeContext } from "./ThemeContext";
+import { Link } from "react-router-dom";
 
 
 
@@ -21,21 +22,24 @@ const Header = () => {
 
     <nav className={`navbar navbar-expand-lg fixed-top ${isSun ? 'navbar-light' : 'navbar-dark'}`}>
       <div class="container">
-        <a class="navbar-brand" href="#"><img src={logoSrc} alt="Logo" /></a>
+        {/* <a class="navbar-brand" href="#"><img src={logoSrc} alt="Logo" /></a>
         <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample09" aria-controls="navbarsExample09" aria-expanded="false" aria-label="Alternar navegación">
           <span class="navbar-toggler-icon"></span>
-        </button>
+        </button> */}
 
         <div class="navbar-collapse collapse" id="navbarsExample09">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li className={`${isSun ? 'nav-item' : 'nav-item-dark'}`}>
-              <a class="nav-link" aria-current="page" href="#">Home</a>
+              <Link class="nav-link" aria-current="page" to="/">Home</Link>
             </li>
             <li className={`${isSun ? 'nav-item' : 'nav-item-dark'}`}>
-              <a class="nav-link" href="#">Heroes</a>
+              <a class="nav-link" href="#">Characters</a>
             </li>
             <li className={`${isSun ? 'nav-item' : 'nav-item-dark'}`}>
-              <a class="nav-link" href="#">Villains</a>
+              <Link  class="nav-link" to="/transformations">Transformations</Link >
+            </li>
+            <li className={`${isSun ? 'nav-item' : 'nav-item-dark'}`}>
+              <Link  class="nav-link">Planets</Link >
             </li>
             <li className={`${isSun ? 'nav-item' : 'nav-item-dark'}`}>
               <a class="nav-link" href="#">About</a>

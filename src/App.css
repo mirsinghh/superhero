@@ -2,22 +2,39 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap');
 
-.noto-sans {
-  font-family: "Noto Sans", serif;
-  font-optical-sizing: auto;
-  font-weight: 700;
-  font-style: normal;
-  font-variation-settings:
-    "wdth" 100;
-}
 
 *{
   font-family: "Geist", serif;
 }
 
 body {
-  padding-top: 50px; /* Ajusta según la altura del navbar */
+  padding-top: 50px; 
+  height: 100%;
+  display: flex;
+  flex-direction: column;/* Ajusta según la altura del navbar */
 }
+
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Asegura que ocupe toda la altura del viewport */
+}
+
+.main-content {
+  flex: 1; /* Expande el contenido y empuja el footer hacia abajo */
+}
+
+.footer {
+  margin-top: auto; /* Hace que el footer siempre esté al final */
+}
+
 
 .body-dark{
   background-color: #000000;
@@ -59,6 +76,11 @@ body {
 
 
 /* ///////////////////  HEADER //////////////////////// */
+
+
+.navbar{
+  height: 65px;
+}
 
 .navbar-light{
   /* background-color: #ffffff; */
@@ -304,21 +326,20 @@ footer span:hover{
 
 /* ///////////////////// CARD ////////////////////////// */
 
-.card{
-  /* margin-left: 50px; */
-
-  /* width: 250px; */
+/* .card{
+  margin-bottom: 30px;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
 }
 
 .card img{
-  border-radius: 8px;
   cursor: pointer;
-  width: 250px;
-  height: 250px;
-  object-fit: cover;
-}
-
-/* .container{
-  background-color: #e3e5e2;
-
+  width: 300px;
+  height: 400px;
+  object-fit: contain;
 } */
+
+
+
+
+/* ///////////////////// CHARACTER ////////////////////////// */
+
