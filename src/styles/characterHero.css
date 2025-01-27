@@ -1,0 +1,62 @@
+.containerHeroSun {
+    background-color: #F8F9FA;
+    /* background-color: #3d3d3d; */
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    position: relative;
+    overflow: hidden;
+    background-image: 
+        linear-gradient(to right, rgba(0, 0, 0, 0.1) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 1px, transparent 1px);
+
+        /* linear-gradient(to right, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 1px, transparent 1px); */
+    background-size: 40px 40px;
+}
+  
+
+.containerHeroDark {
+    background-color: #3d3d3d;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    position: relative;
+    overflow: hidden;
+    background-image: 
+        linear-gradient(to right, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+    background-size: 40px 40px;
+}
+
+.containerHeroDark h1,
+.containerHeroDark .lead {
+    color: white;
+}
+
+
+.rowHero {
+    justify-content: center;
+}
+  
+.divCardHero {
+    margin: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

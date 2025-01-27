@@ -1,33 +1,13 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { ThemeContext } from "./ThemeContext";
 import Card from './Card';
-
-
-const styles = {
-  container: {
-    backgroundColor: "#F8F9FA", 
-    boxShadow: "rgba(0, 0, 0, 0.16) 0px 1px 4px",
-    position: "relative",
-    overflow: "hidden",
-    backgroundImage: `
-      linear-gradient(to right, rgba(0, 0, 0, 0.1) 1px, transparent 1px), 
-      linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 1px, transparent 1px)`,
-    backgroundSize: "40px 40px", // Tamaño de la cuadrícula
-  },
-  row: {
-    justifyContent: "center", 
-  },
-  divCard: {
-    margin: "10px",
-  }
-
-
-};
+import '../styles/characterHero.css';
 
 const CharacterHero = () => {
   const { isSun } = useContext(ThemeContext);
   const [characters, setCharacters] = useState([]);
   const [transformations, setTransformations] = useState([]);
+
 
   // Función para obtener los datos de la API
   useEffect(() => {
@@ -56,13 +36,14 @@ const CharacterHero = () => {
     return (
 
         <div>
-            <div className="container mb-5 rounded" style={styles.container}>
+            <div className={`container mb-5 rounded ${isSun ? 'containerHeroSun' : 'containerHeroDark'}`}>
                 <div className="p-5 text-start rounded-3 title">
                     <h1>CHARACTERS</h1>
                     <p className="lead">Conoce a los personajes más icónicos de Dragon Ball.</p>
-                    <div className="row" style={styles.row}>
+                    <div className="row rowHero">
                         {characters.map((char) => (
-                        <div key={char.id} className="col-12 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center align-items-center" style={styles.divCard}>
+                        <div key={char.id} className="col-12 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center align-items-center divCardHero">
+                        {/* <div key={char.id} className="col-12 col-sm-6 col-md-6 col-lg-4 d-flex justify-content-center align-items-center divCardHero"> */}
                             <Card className="text-center" character={char} />
                         </div>
                         ))}
@@ -70,13 +51,13 @@ const CharacterHero = () => {
                 </div>
             </div>
 
-            <div class="container mb-5 rounded" style={styles.container}>
+            <div className={`container mb-5 rounded ${isSun ? 'containerHeroSun' : 'containerHeroDark'}`}>
                 <div class="p-5 text-end rounded-3 title">
                     <h1>TRANSFORMATIONS</h1>
                     <p className="lead">Descubre las formas más poderosas de los guerreros.</p>
-                    <div className="row" style={styles.row}>
+                    <div className="row rowHero">
                         {transformations.map((trans) => (
-                        <div key={trans.id} className="col-12 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center align-items-center" style={styles.divCard}>
+                        <div key={trans.id} className="col-12 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center align-items-center divCardHero">
                             <Card className="text-center" transformation={trans} />
                         </div>
                         ))}
@@ -91,3 +72,22 @@ const CharacterHero = () => {
 };
 
 export default CharacterHero;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -93,7 +93,7 @@ html, body {
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
   z-index: 1030;
-  backdrop-filter: blur(20px); /* Desenfoque del contenido detrás */
+  backdrop-filter: blur(10px); /* Desenfoque del contenido detrás */
   background-color: rgba(255, 255, 255, 0.8);
   color:#F6F6F6;
   color:#bdbdbd;
@@ -107,7 +107,7 @@ html, body {
   border-bottom: 0.5px solid #3b3b3b;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
   z-index: 1030;
-  backdrop-filter: blur(20px); /* Desenfoque del contenido detrás */
+  backdrop-filter: blur(10px); /* Desenfoque del contenido detrás */
   background-color: #0006;
   /* color:#F6F6F6; */
   /* color:#ffffff;  */   
@@ -143,12 +143,10 @@ html, body {
 }
 
 .moon:hover{
-  background-color: #7c7c7c;
+  background-color: #4f4f4f;
+  cursor: pointer;
 }
 
-.bi-moon-stars:hover{
-  fill: black;
-}
 
 
 
