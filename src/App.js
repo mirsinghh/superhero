@@ -5,17 +5,18 @@ import Card from './components/Card';
 import { ThemeProvider } from './components/ThemeContext';
 import Footer from './components/Footer';
 import Header from './components/Header';
-import Home from './components/Home';
-import CharacterList from './components/CharacterList';
-// import Character from "./components/Character";
-import Transformations from "./components/Transformations";
+import Home from './pages/Home';
+import Transformations from "./pages/Transformations";
 import CharacterHero from "./components/CharacterHero";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import ScrollToTop from "./utils/ScrollToTop";
+import Characters from './pages/Characters';
 
 function App() {
   return (
     <ThemeProvider>
       <Router>
+      <ScrollToTop />
         <div className="d-flex flex-column min-vh-100"> {/* Contenedor principal */}
           <Header /> {/* Header siempre visible */}
 
@@ -34,6 +35,7 @@ function App() {
 
               {/* Página de transformaciones */}
               <Route path="/transformations" element={<Transformations />} />
+              <Route path="/characters" element={<Characters />} />
             </Routes>
           </div>
 

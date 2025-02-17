@@ -43,13 +43,10 @@ const Header = () => {
               <Link class="nav-link" aria-current="page" to="/">Home</Link>
             </li>
             <li className={`${isSun ? 'nav-item' : 'nav-item-dark'}`}>
-              <a class="nav-link" href="#">Characters</a>
+              <a class="nav-link" href="/characters">Characters</a>
             </li>
             <li className={`${isSun ? 'nav-item' : 'nav-item-dark'}`}>
               <Link  class="nav-link" to="/transformations">Transformations</Link >
-            </li>
-            <li className={`${isSun ? 'nav-item' : 'nav-item-dark'}`}>
-              <Link  class="nav-link">Planets</Link >
             </li>
             <li className={`${isSun ? 'nav-item' : 'nav-item-dark'}`}>
               <a class="nav-link" href="#">About</a>

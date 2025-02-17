@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+// import '../styles/card.css';
+import Card from '../components/Card';
+
 
 const Transformations = () => {
   const navigate = useNavigate();
@@ -41,19 +44,11 @@ const Transformations = () => {
 
   return (
     <div className="container" style={{ paddingTop: "50px" }}>
-      <h1>Transformations</h1>
-      <div className="row justify-content-center g-3">
+      <div className="row rowHero">
         {transformations.length > 0 ? (
           transformations.map((transformation) => (
-            <div key={transformation.id} className="col-12 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center align-items-center">
-              <div className="card text-center">
-                <img src={transformation.image || "https://via.placeholder.com/150"} 
-                     className="card-img-top" 
-                     alt={transformation.name} />
-                <div className="card-body">
-                  <h5 className="text-start">{transformation.name}</h5>
-                </div>
-              </div>
+            <div key={transformation.id} className="col-12 col-sm-6 col-md-4 col-lg-3 mb-4 d-flex justify-content-center align-items-center divCardHero">
+              <Card className="text-center" transformation={transformation} />
             </div>
           ))
         ) : (
@@ -61,8 +56,6 @@ const Transformations = () => {
         )}
       </div>
     </div>
-
-
   );
 };
 

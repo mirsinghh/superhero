@@ -33,3 +33,44 @@
 .text {
     font-weight: bold;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+.card-stats {
+    position: absolute;
+    top: 10px;
+    left: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+}
+
+.stat-item {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-size: 14px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover .card-stats {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
