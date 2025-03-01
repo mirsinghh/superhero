@@ -40,7 +40,7 @@ const CharacterHero = () => {
                 <div className="p-5 text-start rounded-3 title">
                     <h1>CHARACTERS</h1>
                     <p className="lead">Conoce a los personajes más icónicos de Dragon Ball.</p>
-                    <div className="row rowHero">
+                    <div className="row rowHero gap-5">
                         {characters.map((char) => (
                         <div key={char.id} className="col-12 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center align-items-center divCardHero">
                         {/* <div key={char.id} className="col-12 col-sm-6 col-md-6 col-lg-4 d-flex justify-content-center align-items-center divCardHero"> */}

@@ -1,7 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 // import '../styles/card.css';
-import Card from '../components/Card';
+import Card from '../components/CardT';
+import { ThemeContext } from "../components/ThemeContext";
 
 
 const Transformations = () => {
@@ -9,6 +10,9 @@ const Transformations = () => {
   const [transformations, setTransformations] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const { isSun } = useContext(ThemeContext);
+  
+  
 
   useEffect(() => {
     const fetchTransformations = async () => {
@@ -43,17 +47,32 @@ const Transformations = () => {
   if (error) return <p className="text-danger">Error: {error}</p>;
 
   return (
-    <div className="container" style={{ paddingTop: "50px" }}>
-      <div className="row rowHero">
-        {transformations.length > 0 ? (
-          transformations.map((transformation) => (
-            <div key={transformation.id} className="col-12 col-sm-6 col-md-4 col-lg-3 mb-4 d-flex justify-content-center align-items-center divCardHero">
-              <Card className="text-center" transformation={transformation} />
-            </div>
-          ))
-        ) : (
-          <p>No transformations found.</p>
-        )}
+
+    <div className={`px-4 py-5 text-center ${isSun ? 'home-light' : 'home-dark'}`}>
+      <div class="py-5 title">
+          <h1 class="display-5 fw-bold">Transformations</h1>
+          <div class="col-lg-6 mx-auto">
+              <p class="fs-5 mb-4">Here you'll find <b>everything</b> you need to know about your favorite <b>superheroes</b> and <b>villains</b>. From their origins and powers to their most iconic stories, our wiki is designed to bring you detailed and <b>up-to-date</b> information about the fascinating world of superheroes.</p>
+              <div class="home-buttons d-grid gap-2 d-sm-flex justify-content-sm-center">
+                  <button type="button" class="btn btn-lg px-4 me-sm-3">Custom button</button>
+                  <button type="button" class="btn btn-lg px-4">Secondary</button>
+              </div>
+          </div>
+      </div>
+      <div className="container justify-content-center" style={{ paddingTop: "50px"}}>
+        {/* <div className="row rowHero"> */}
+        {/* <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4  g-4"> */}
+        <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4 justify-content-center">
+          {transformations.length > 0 ? (
+            transformations.map((transformation) => (
+              <div key={transformation.id} className="col d-flex justify-content-center" style={{ width: "fit-content" }}> 
+                <Card className="text-center w-100" transformation={transformation} />
+              </div>
+            ))
+          ) : (
+            <p>No transformations found.</p>
+          )}
+        </div>
       </div>
     </div>
   );

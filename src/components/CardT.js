@@ -16,7 +16,6 @@ const Card = ({ character = {}, transformation = {} }) => {
       </div>
       <div className="card-body text-start w-100">
         <h5 className="text">{item.name}</h5>
-        <h6 className="text">{item.race} - {item.gender}</h6>
       </div>
 
       {/* Contenedor de estadísticas (oculto por defecto) */}
